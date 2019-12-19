@@ -8,10 +8,17 @@ req = requests.get(url).text
 soup = BeautifulSoup(req, 'html.parser')
 #################
 
-selector = ".ranking_contents > ul > li:nth-child(1) > a"
+selector = "#section_politics > div.com_list > div > ul > li > a > strong"
 
-one = soup.select_one(selector)
-print(one.text)
+
+
+one = soup.select(selector)
+
+
+for item in one :
+   print(item.text)
+
+
 # list_news = soup.select(selector)
 
 # print(list_news)

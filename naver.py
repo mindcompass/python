@@ -15,5 +15,9 @@ search = soup.select("#PM_ID_ct > div.header > div.section_navbar > div.area_hot
 
 # search = soup.select_one(selector)
 
+
+
+
 for item in search :
    print(item.text)
+
